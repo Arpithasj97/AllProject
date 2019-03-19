@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+ 
+<form method="post" action="LoginServlet">
+
+
+ <h1>Employee management system</h1> </br>
+UserName
+<input type="text" name="username" placeholder="please enter user name" name="username" id="id1" /><br/>
+<span id="error1"></span><br>
+Password
+<input type="text" name="password" placeholder="please enter user password" name="password" id="id2" id="current"/>
+<span id="error2"></span><br>
+<br>
+<input type="submit">
+<br/>
+
+</form><br/>
+
+<script>/*
+function validate(){
+	
+	
+	var name=document.getElementById("id1").value;
+		var password=document.getElementById("id2").value;
+		var patternName="^[A-Z a-z]+$";
+		var patternPassword="^[A-Z a-z0-9]+$";
+		
+		if(name.match(patternName)&& password.match(patternPassword))
+		{
+			return true;
+		}
+		else if(name.match(patternName)==null && password.match(patternPassword)==null)
+			{
+			document.getElementById("error1").innerHTML="Name can be a character ";
+			document.getElementById("error2").innerHTML="Password must be alphanumaric";
+			return false;
+			}
+		else if(name.match(patternName)==null){
+			document.getElementById("error1").innerHTML="Name can be a char ";
+			document.getElementById("error2").innerHTML="";
+			return false;
+		}		
+		else if(password.match(patternPassword)==null){
+			document.getElementById("error1").innerHTML="";
+			document.getElementById("error2").innerHTML="Password shoud be alphanumaric";
+			return false;
+		}
+		
+} 
+
+function validate(){
+	
+	
+	var name=document.getElementById("id1").value;
+		var password=document.getElementById("id2").value;
+		
+		
+		
+		if(name.trim().toLowerCase()=="admin" && password.trim()=="admin")
+		{
+			return true;
+		}
+		else if(name.trim()=="" && password.trim()=="")
+			{
+			document.getElementById("error1").innerHTML="Name can not match ";
+			document.getElementById("error2").innerHTML="Password can write currectly";
+			return false;
+			}
+		else if(name.trim()==""){
+			document.getElementById("error1").innerHTML="Name can not match ";
+			document.getElementById("error2").innerHTML="";
+			return false;
+		}		
+		else if(password.trim()==""){
+			document.getElementById("error1").innerHTML="";
+			document.getElementById("error2").innerHTML="Password can write currectly";
+			return false;
+		}
+		else
+			{
+			document.getElementById("error1").innerHTML="Name is invalid ";
+			document.getElementById("error2").innerHTML="Password is invalid";
+			return false;
+			}
+		
+		
+}    
+
+
+ 
+ /*
+ 
+ function checkpwd()
+ {
+	 var x = document.getElementById("current").value;
+	  if (x.type === "password") {
+	    x.type = "text";
+	  } else {
+	    x.type = "password";
+	  }
+ }
+ */
+
+</script>
+</body>
+</html>

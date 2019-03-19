@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+<nav class="navbar navbar-inverse" style="top:-20px">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#" >Library Management System</a>
+            </div>
+            <ul class="nav navbar-nav" style="float:right">
+              
+              <li><a href="#" onclick="openForm()">Student Panel</a>
+                </li>
+              <li><a href="#"onclick="openForm()">Company Panel</a></li>
+              <li><a href="#"onclick="openForm()">Admin Panel</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-phone"></span>&nbsp;Contact Us</a></li>
+
+            </ul>
+</div>
+</body>
+</html>

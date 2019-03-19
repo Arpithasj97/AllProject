@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sat Mar 16 17:01:47 IST 2019
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Arpitha\\eclipse-workspace\\Springj2ee\\WebContent\\WEB-INF\\lib\\spring-web-5.1.5.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.1.5.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Arpitha\\eclipse-workspace\\Springj2ee\\WebContent\\WEB-INF\\lib\\spring-web-5.1.5.RELEASE.jar=WEB-INF/lib/spring-web-5.1.5.RELEASE.jar

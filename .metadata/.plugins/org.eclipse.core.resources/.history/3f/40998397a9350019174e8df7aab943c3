@@ -1,0 +1,49 @@
+package legatoarp;
+	import java.sql.*;
+	import java.lang.NullPointerException;
+	public class Login {
+		public static Connection getConnection() {
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver") ;
+				Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/db15","root","root");
+						System.out.println("connected successfully");
+						return con;			
+			}catch(ClassNotFoundException e) {
+				e.printStackTrace();
+				return null;
+			}catch(NullPointerException e) {
+				e.printStackTrace();
+				return null;
+			}
+			
+			catch(SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		/*public static boolean validate(String username,String password,Connection con ) {
+			Boolean flag=false;
+			try {
+				String sqlExecute="select * from db15.users where username=? and pwd=?";
+				PreparedStatement pstmst=con.prepareStatement(sqlExecute);
+				pstmst.setString(1,username);
+				pstmst.setString(2,password);
+				ResultSet rs=pstmst.executeQuery();
+				while(rs.next()) {
+					flag=true;
+					break;
+					
+				}
+				return flag;
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+				return flag;
+			}*/
+			
+			
+		}
+
+	
+
+

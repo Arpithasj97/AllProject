@@ -1,0 +1,5 @@
+package legato;
+import java.util.*;
+public class Appu {
+
+}

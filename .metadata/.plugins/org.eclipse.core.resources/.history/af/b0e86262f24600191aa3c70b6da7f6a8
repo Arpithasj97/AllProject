@@ -1,0 +1,16 @@
+package com.spring;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class TestEmployee {
+public static void main(String[] args) {
+	//Employee e=new Employee
+	ApplicationContext beanGactory=new ClassPathXmlApplicationContext("spring.xml")
+	
+	BeanFactory beanFactory=new XmlBeanFactory(new FileSystemResource("spring.xml"));
+Employee e=(Employee) beanFactory.getBean("employee");
+	e.display();
+}
+}

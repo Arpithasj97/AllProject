@@ -1,0 +1,13 @@
+package com.spring;
+
+public class singletonClassDemo {
+public static void main(String[] args) {
+	singlrtonEmployee e=new singletonEmployee.getObject("IIHT");
+	singlrtonEmployee e1=new singletonEmployee.getObject("LEGATO");
+	e.display();
+	e1.display();
+	System.out.println(e);
+
+	System.out.println(e1);
+}
+}

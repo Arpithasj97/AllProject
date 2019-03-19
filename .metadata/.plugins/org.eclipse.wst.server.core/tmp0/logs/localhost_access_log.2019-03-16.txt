@@ -1,0 +1,5 @@
+127.0.0.1 - - [16/Mar/2019:16:40:57 +0530] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [16/Mar/2019:16:40:57 +0530] "GET /exercise/WEB-INF/classes/servlet/String.java HTTP/1.1" 404 1013
+0:0:0:0:0:0:0:1 - - [16/Mar/2019:16:40:58 +0530] "GET /favicon.ico HTTP/1.1" 404 1047
+127.0.0.1 - - [16/Mar/2019:16:43:12 +0530] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [16/Mar/2019:16:43:12 +0530] "GET /exercise/WEB-INF/classes/servlet/String.java HTTP/1.1" 404 1013

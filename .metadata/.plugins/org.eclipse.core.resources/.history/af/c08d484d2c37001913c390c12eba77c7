@@ -1,0 +1,109 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+//import Employee management.Customer;
+
+public class Login {
+	public static Connection getConnection() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver") ;
+			Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/db17","root","root");
+					System.out.println("connected successfully");
+					return con;			
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		}catch(NullPointerException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		catch(SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public static boolean validate(String userId,String pwd,Connection con ) {
+		Boolean flag=false;
+		try {
+			String sqlExecute="select * from db17.user where userId=? and pwd=?";
+			PreparedStatement pstmst=con.prepareStatement(sqlExecute);
+			pstmst.setString(1,userId);
+			pstmst.setString(2,pwd);
+			ResultSet rs=pstmst.executeQuery();
+			while(rs.next()) {
+				flag=true;
+				break;
+				
+			}
+			return flag;
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+			return flag;
+		}
+	
+			
+	}
+	public static ArrayList<Customer> displayData(Connection con){
+		String sql="select * from db15.Customer";
+		PreparedStatement pstmst;
+		try {
+			pstmst=con.prepareStatement(sql);
+			ArrayList<Customer> al=new ArrayList<Customer>();
+			ResultSet rs=pstmst.executeQuery();
+			while(rs.next()); {
+				Customer d=new Customer();
+				d.setuserId(rs.getString(1));
+				d.setpwd(rs.getString(2));
+		
+				al.add(d);
+				
+				
+			}
+		pstmst.close();
+		rs.close();
+		con.close();
+		return al;
+		
+		
+	}
+catch(SQLException e) {
+	e.printStackTrace();
+	return null;
+}
+	}
+}
+	/*public static void insertData(Customer d,Connection con) {
+		String city="";
+		for(int i-0;i<getcities().length;i++) {
+			city=city+","+d.getcities()[i];			
+			}
+		 String sql="insert into db15.Customer values(?,?,?)";
+		 PreparedStatement p;
+		 try {
+			  p=con.prepareStatement(sql);
+			  p.setString(1, d.getName());
+			  p.setString(1, d.getGender());
+			  p.setString(3, city);
+			  p.executeUpdate();
+		 }
+		 catch(SQLException e) {
+			 e.printStackTrace();
+		 }
+	    }
+	private static Object getcities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+ }*/
+		 
+	
+
+
+
+

@@ -1,0 +1,30 @@
+package com.spring;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+
+
+
+
+
+
+	public void insertCustomerData(Customer customer) {
+		SessionFactory factory = HibernateUtil.getSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx = session.beginTransaction();
+		
+		
+		session.save(customer);
+		
+		tx.commit();
+		session.close(); 
+		
+		
+	}
+
+	

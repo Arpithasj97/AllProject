@@ -1,0 +1,13 @@
+package com.spring;
+
+public class singletonEmployee {
+private String name;
+private static int counter=0;
+ 
+private singletonEmployee() {
+	
+}
+public static singletonEmployee getObject(String name) {
+	return new singlrtonEmployee(name);
+}
+}

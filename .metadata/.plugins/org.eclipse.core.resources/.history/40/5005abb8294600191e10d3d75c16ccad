@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Insertion position: ${res} 
+<table>
+<tr>
+<th>User Name</th>
+<th>Password</th>
+</tr>
+<%=
+if(display!=null){
+
+String UserId=request.getParameter("username");
+		String name = request.getParameter("password");
+%>
+</table>
+</body>
+</html>

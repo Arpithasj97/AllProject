@@ -1,0 +1,60 @@
+package com.login;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.beans.BooksInfo;
+
+public class BooksDAO {
+
+public static Connection getConnection() {
+		
+		try {
+			//load the driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			//create the connection
+			Connection con = DriverManager.getConnection
+				("jdbc:mysql://localhost:3306/db_lib","root","admin");
+			System.out.println("Connected");
+			return con;
+		
+		
+		}
+		catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+			
+	}
+
+public static void insertData(BooksInfo books,Connection con) {
+	
+	String sq="insert into detail values(?,?,?,?,?,?)";
+	PreparedStatement p;
+	
+	try {
+		p = con.prepareStatement(sq);
+		p.setLong(1,books.getCode());
+		p.setString(2,books.getBookName());
+		p.setString(3,books.getAuthor());
+		p.setString(4,books.getPublication());
+		p.setString(5,books.getSubject());
+		p.setInt(6,books.getNoOfCopies());
+		
+		
+		p.executeUpdate();
+		
+		
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
+	
+}
+

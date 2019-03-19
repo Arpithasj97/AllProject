@@ -1,0 +1,13 @@
+package com.spring;
+
+public class Employee {
+
+	public void display() {
+		
+		System.out.println("Display Method called");
+		
+	}
+	
+	
+
+}

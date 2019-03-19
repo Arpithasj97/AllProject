@@ -1,0 +1,101 @@
+
+.page{
+	width:1340px;
+	height:600px;
+	border-style:groove;
+}
+
+.headerpart
+{
+	width:1340px;
+	height:150px;
+	border-style:groove;
+	background-color:rgb(12,100,198);
+	background-image:url('header.jpg');
+	background-repeat:no-repeat;
+}
+
+.linkspart
+{
+	widh:800px;
+	height:35px;
+	border-style:groove;
+	margin-top:20px;
+	background-color:rgb(12,100,198);
+}
+
+.linkspart a
+{
+	color:rgb(245,246,251);
+	text-decoration:none;
+}
+
+.linkspart a:hover
+{
+	background-color:rgb(245,246,251);
+	color:rgb(12,100,198);
+}
+
+.bodyspart
+{
+	widh:800px;
+	height:600px;
+	border-style:groove;
+	margin-top:5px;
+
+}
+
+.bodypart.imagepart
+{
+	widh:550px;
+	height:250px;
+	border-style:groove;
+	background-image:url("library-events.png");
+	background-repeat:no-repeat;
+	display:inline-block;
+	
+}
+
+.bodypart .newspart
+{
+	widh:220px;
+	height:550px;
+	border-style:groove;
+	float:right;
+}
+
+.bodypart.newspart h2
+{
+	color:green;
+	margin-left:10px;
+	}
+	
+	.bodypart .newspart .news
+	{
+	width:230px;
+	height:500px;
+	border-style:groove;
+	}
+	
+.bodypart.newspart.news.h4
+{
+	color:blue;
+}
+
+.bodyhpart h3
+{
+	color:blue;
+	text-alignment:center;
+}
+
+.footerpart
+{
+	
+	width:1340px;
+	height:30px;
+	margin-top:5px;
+	background-color:rgb(12,100,190);
+	border-style:groove;
+}
+
+.

@@ -1,0 +1,18 @@
+package com.spring;
+
+public class singletonEmployee {
+private String name;
+private static int counter=0;
+ 
+private singletonEmployee() {
+	
+}
+public static SingletonEmployee getObject(String name) {
+	return new SinglrtonEmployee(name);
+}
+public void display() {
+    System.out.println("name="+this.name);
+    System.out.println("age=" +counter);
+	
+}
+}
